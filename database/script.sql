@@ -1,0 +1,29 @@
+DROP DATABASE IF EXISTS MyArchivo;
+GO
+CREATE DATABASE MyArchivo;
+GO
+
+USE MyArchivo;
+GO
+
+CREATE TABLE Usuario (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Nombre VARCHAR(100) NOT NULL,
+    Apellidos VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    Nickname VARCHAR(50) NOT NULL UNIQUE,  
+    Password VARCHAR(255) NOT NULL
+);
+GO
+
+CREATE TABLE Archivos (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Nombre VARCHAR(255) NOT NULL,
+    Ruta VARCHAR(500) NOT NULL,
+    TipoArchivo VARCHAR(50) NOT NULL,
+    Tamanyo INT NOT NULL,
+    FechaCreacion DATETIME DEFAULT GETDATE(),
+    Id_Usuario INT NOT NULL,
+    FOREIGN KEY (Id_Usuario) REFERENCES Usuario(Id)
+);
+GO
