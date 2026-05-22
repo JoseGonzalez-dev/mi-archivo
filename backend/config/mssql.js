@@ -8,25 +8,25 @@ const config = {
     options: {
         encrypt: true,
         trustServerCertificate: true //Desarrollo local
-    }   
+    }
 }
 
 let pool
 
 export const connectDB = async () => {
     try {
-        console.log('MSSQL | Intentando conectar...');
+        console.log("MSSQL | Intentando conectar...");
         pool = await sql.connect(config);
-        console.log('MSSQL | Base de datos conectada exitosamente');
+        console.log("MSSQL | Base de datos conectada exitosamente");
     } catch (error) {
-        console.error('MSSQL | Error al conectar a la base de datos: ', error);
+        console.error("MSSQL | Error al conectar a la base de datos: ", error);
         process.exit(1);
     }
 }
 
 export const getPool = () => {
-    if(!pool) throw new Error('La base de datos no esta conectada.');
-        return pool;
+    if (!pool) throw new Error("La base de datos no esta conectada.");
+    return pool;
 }
 
 export default sql;
