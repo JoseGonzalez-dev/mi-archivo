@@ -19,6 +19,6 @@ export const createUser = async (userData) => {
         .input("email", sql.NVarChar, userData.email)
         .input("nickname", sql.NVarChar, userData.nickname)
         .input("password", sql.NVarChar, userData.password)
-        .query("INSERT INTO Usuario (Nombre, Apellidos, Email, Nickname, Password) OUTPUT INSERTED.* VALUES (@nombres, @apellidos, @email, @nickname, @password)");
+        .query("INSERT INTO Usuario (Nombres, Apellidos, Email, Nickname, Password) OUTPUT INSERTED.* VALUES (@nombres, @apellidos, @email, @nickname, @password)");
     return result.recordset[0];
 }
