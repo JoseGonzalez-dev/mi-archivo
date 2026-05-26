@@ -131,8 +131,10 @@ docker compose up --build
 
 ## Capturas de pantalla
 ![Login](docs/Login.png)
+![Register](docs/Register.png)
 ![Dashboard](docs/DasboardPrincipal.png)
 ![Upload](docs/Upload.png)
+![Update](docs/Update.png)
 ![Delete](docs/Delete.png)
 
 ## Diagrama ER
