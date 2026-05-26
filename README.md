@@ -130,15 +130,15 @@ docker compose up --build
 - Si compartes el repositorio, usa solo valores de ejemplo en `.env.example`.
 
 ## Capturas de pantalla
+![Login](docs/Login.png)
+![Register](docs/Register.png)
+![Dashboard](docs/DasboardPrincipal.png)
+![Upload](docs/Upload.png)
+![Update](docs/Update.png)
+![Delete](docs/Delete.png)
 
-- Pantalla de login:
-  - `docs/screenshots/login.png`
-- Tablero de archivos:
-  - `docs/screenshots/dashboard.png`
-- Modal de subida:
-  - `docs/screenshots/upload.png`
-
-*(Reemplaza estas rutas con capturas reales cuando las agregues.)*
+## Diagrama ER
+![Diagrama ER](docs/ER-Mi-Archivo.drawio.png)
 
 ## Notas importantes
 
