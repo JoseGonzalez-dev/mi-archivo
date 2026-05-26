@@ -21,3 +21,8 @@ export const renameFile = async (id, nombre) => {
   const response = await api.put(`/files/${id}`, { nombre });
   return response.data;
 };
+
+export const getFileById = async (id) => {
+    const response = await api.get(`/files/${id}`);
+    return response.data;
+};
